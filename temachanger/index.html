@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Değiştirici</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header class="py-4">
+            <h1 class="text-center mb-4">Tema Değiştirici</h1>
+            <div class="theme-controls d-flex justify-content-center gap-3 flex-wrap">
+                <button id="themeToggle" class="btn btn-primary" aria-label="Tema değiştir">
+                    <i class="fas fa-moon"></i> Tema Değiştir
+                </button>
+                <div class="theme-buttons">
+                    <button class="btn btn-outline-primary theme-btn" data-theme="light-theme" aria-label="Açık tema">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="btn btn-outline-primary theme-btn" data-theme="dark-theme" aria-label="Koyu tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn btn-outline-primary theme-btn" data-theme="sepia-theme" aria-label="Sepia tema">
+                        <i class="fas fa-book"></i>
+                    </button>
+                    <button class="btn btn-outline-primary theme-btn" data-theme="blue-night-theme" aria-label="Mavi gece teması">
+                        <i class="fas fa-star"></i>
+                    </button>
+                </div>
+                <div class="font-size-controls">
+                    <button id="decreaseFont" class="btn btn-secondary" aria-label="Yazı boyutunu küçült">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="increaseFont" class="btn btn-secondary" aria-label="Yazı boyutunu büyüt">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <select id="fontFamily" class="form-select" aria-label="Yazı tipi seç">
+                    <option value="Arial, sans-serif">Arial</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                    <option value="'Courier New', monospace">Courier New</option>
+                    <option value="Georgia, serif">Georgia</option>
+                </select>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <section class="mb-5">
+                <h2>Hoş Geldiniz!</h2>
+                <p>Bu sayfa, farklı tema seçenekleri sunan interaktif bir demo sayfasıdır. Aşağıdaki özellikleri deneyebilirsiniz:</p>
+                <ul>
+                    <li>Açık/Koyu tema değiştirme</li>
+                    <li>Yazı boyutunu ayarlama</li>
+                    <li>Farklı yazı tipleri seçme</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Örnek İçerik</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title">Kart Başlığı</h3>
+                        <p class="card-text">Bu bir örnek kart içeriğidir. Tema değişikliklerinin nasıl göründüğünü görebilirsiniz.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

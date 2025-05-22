@@ -1,0 +1,153 @@
+:root {
+    --transition-speed: 0.3s;
+}
+
+/* Light Theme (Default) */
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --card-title-color: #212529;
+    --card-text-color: #333333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --card-title-color: #ffffff;
+    --card-text-color: #ffffff;
+}
+
+/* Sepia Theme */
+.sepia-theme {
+    --bg-color: #f4ecd8;
+    --text-color: #5b4636;
+    --card-bg: #e4d5b7;
+    --border-color: #d4c5a7;
+    --card-title-color: #3c2a21;
+    --card-text-color: #5b4636;
+}
+
+/* Blue Night Theme */
+.blue-night-theme {
+    --bg-color: #1a1b26;
+    --text-color: #a9b1d6;
+    --card-bg: #24283b;
+    --border-color: #414868;
+    --card-title-color: #7aa2f7;
+    --card-text-color: #a9b1d6;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    line-height: 1.6;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.card-title {
+    color: var(--card-title-color);
+    transition: color var(--transition-speed);
+}
+
+.card-text {
+    color: var(--card-text-color);
+    transition: color var(--transition-speed);
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-area {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Erişilebilirlik ve Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .theme-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .font-size-controls {
+        display: flex;
+        gap: 0.5rem;
+    }
+}
+
+/* Buton ve Kontrol Stilleri */
+.btn {
+    transition: all var(--transition-speed);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.theme-btn.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-select {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Erişilebilirlik için Focus Stilleri */
+:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Yazı Boyutu Kontrolleri */
+.font-size-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Kart Hover Efekti */
+.card {
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+} 
